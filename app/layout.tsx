@@ -83,7 +83,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -113,6 +113,8 @@ export default function RootLayout({
             })
           }}
         />
+      </head>
+      <body className={inter.className} suppressHydrationWarning>
         <ThemeProvider>
           {children}
         </ThemeProvider>
