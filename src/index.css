@@ -1,0 +1,91 @@
+:root {
+  /* Primary Colors */
+  --bg-black: #0A0A0A;
+  --gold-primary: #C9A84C;
+  --gold-light: #F4D68C;
+  --bg-charcoal: #1A1A1A;
+  --bg-matte: #2A2A2A;
+
+  /* Secondary Colors */
+  --text-white: #FFFFFF;
+  --text-offwhite: #F5F0E8;
+  --color-red: #8B1A1A;
+  --color-green: #2D8B4E;
+
+  /* Gradients */
+  --gold-gradient: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
+  --matte-gradient: linear-gradient(135deg, var(--bg-charcoal) 0%, #1E1E1E 100%);
+
+  /* UI Tokens */
+  --font-primary: 'Alyamama', 'Almarai', sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 50px;
+  
+  --shadow-gold: 0 0 30px rgba(201, 168, 76, 0.4);
+  --shadow-gold-sm: 0 4px 15px rgba(201, 168, 76, 0.15);
+  
+  /* Layout */
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px; /* For fixed navbar */
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-black);
+  color: var(--text-white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography Base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  color: var(--text-white);
+  font-weight: bold;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-primary);
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-gold { color: var(--gold-primary); }
+.text-offwhite { color: var(--text-offwhite); }
+.bg-gold { background-color: var(--gold-primary); }
+.bg-charcoal { background-color: var(--bg-charcoal); }
+
+.glass-panel {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+}
