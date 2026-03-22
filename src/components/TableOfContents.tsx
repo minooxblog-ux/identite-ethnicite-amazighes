@@ -18,7 +18,7 @@ export const TableOfContents: React.FC = () => {
   };
 
   const TocContent = () => (
-    <div className="p-6 lg:p-0 overflow-y-auto h-full lg:h-auto">
+      <div className="p-6 lg:p-0 overflow-y-auto h-full lg:h-auto bg-surface dark:bg-ink-950 border border-default rounded-xl">
       <h2 className="text-sm font-bold uppercase tracking-wider text-earth-600 dark:text-earth-400 mb-4 flex items-center gap-2">
         <List size={16} />
         Sommaire
@@ -32,10 +32,9 @@ export const TableOfContents: React.FC = () => {
                 item.level === 1 ? 'pl-7' : ''
               } ${
                 activeId === item.id
-                  ? 'bg-amazigh-100 dark:bg-ink-700 text-amazigh-800 dark:text-ink-200 font-medium'
-                  : 'text-ink-600 dark:text-ink-300 hover:text-amazigh-700 dark:hover:text-amazigh-300 hover:bg-amazigh-50 dark:hover:bg-ink-800'
-              }`}
-            >
+                  ? 'bg-amber-200/30 dark:bg-amber-400/25 text-ink-900 dark:text-ink-100 font-semibold'
+                  : 'text-ink-600 dark:text-ink-300 hover:text-amber-200 dark:hover:text-amber-100 hover:bg-gray-100 dark:hover:bg-ink-800'
+              }`}            >
               {activeId === item.id && (
                 <ChevronRight size={12} className="text-amazigh-600 dark:text-amazigh-400 shrink-0" />
               )}
@@ -71,7 +70,7 @@ export const TableOfContents: React.FC = () => {
       {/* Overlay for mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/30 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/40 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}

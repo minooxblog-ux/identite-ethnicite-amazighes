@@ -49,7 +49,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-amazigh-50 text-ink-900 dark:bg-ink-950 dark:text-ink-100" lang="fr">
+    <div className="min-h-screen bg-surface text-default dark:bg-ink-950 dark:text-default" lang="fr">
       {/* Hidden content for SEO */}
       <div style={{ display: 'none' }}>
         Identité et ethnicité amazighes à l'ère des réseaux numériques — B. Boulouayz
@@ -61,7 +61,7 @@ function App() {
       <div className="reading-progress" style={{ width: `${progress}%` }} />
 
       {/* Hero Header */}
-      <header className="relative overflow-hidden bg-gradient-to-br from-earth-950 via-earth-900 to-amazigh-950 dark:from-ink-950 dark:via-ink-900 dark:to-ink-800 text-white dark:text-amber-100">
+      <header className="relative overflow-hidden bg-gradient-to-br from-earth-950 via-earth-900 to-amazigh-950 dark:from-ink-950 dark:via-ink-900 dark:to-ink-900 text-white dark:text-amber-100" style={{ boxShadow: '0 5px 25px rgba(0,0,0,0.55)' }}>
         {/* Decorative Tifinagh pattern */}
         <div className="absolute inset-0 opacity-[0.04] select-none pointer-events-none" aria-hidden="true">
           <div className="absolute top-10 left-10 text-[12rem] font-bold leading-none">ⵣ</div>

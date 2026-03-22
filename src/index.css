@@ -117,7 +117,44 @@ body {
   font-family: 'Georgia', 'Times New Roman', 'Noto Serif', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color, #1f2937);
+  background-color: var(--bg-color, #f7f7f8);
 }
+
+:root {
+  --bg-color: #f7f7f8;
+  --surface: #ffffff;
+  --text-color: #111827;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --accent: #d48534;
+}
+
+.dark {
+  --bg-color: #05060a;
+  --surface: #0d111a;
+  --text-color: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #334155;
+  --accent: #ffc766;
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.text-default {
+  color: var(--text-color);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.border-default {
+  border-color: var(--border);
+}
+
 
 .animate-fade-in-up {
   animation: fadeInUp 0.7s ease-out both;
