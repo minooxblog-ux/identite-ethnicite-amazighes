@@ -52,7 +52,7 @@ export const TableOfContents: React.FC = () => {
       {/* Mobile toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="no-print fixed bottom-6 right-6 z-50 lg:hidden bg-amazigh-600 text-white p-3.5 rounded-full shadow-lg hover:bg-amazigh-700 transition-all duration-300 hover:scale-105 active:scale-95"
+        className="no-print fixed bottom-6 right-6 z-50 lg:hidden bg-amazigh-600 text-white p-3.5 rounded-full shadow-lg hover:bg-amazigh-700 transition-all duration-300"
         aria-label="Table des matières"
       >
         {isOpen ? <X size={22} /> : <List size={22} />}
