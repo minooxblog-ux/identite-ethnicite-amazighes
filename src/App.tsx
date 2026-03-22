@@ -20,7 +20,7 @@ const P: React.FC<{ children: React.ReactNode; className?: string; currentParagr
     <p
       id={id}
       data-tts
-      className={`text-ink-800 leading-[1.9] text-[1.05rem] md:text-[1.1rem] mb-5 transition-all duration-500 ${
+      className={`text-ink-800 leading-[1.9] text-[1.05rem] md:text-[1.1rem] mb-5 text-justify transition-all duration-500 ${
         isCurrent ? 'tts-reading' : ''
       } ${className}`}
       lang="fr"
