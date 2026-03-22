@@ -19,7 +19,7 @@ export const TableOfContents: React.FC = () => {
 
   const TocContent = () => (
     <div className="p-6 lg:p-0 overflow-y-auto h-full lg:h-auto">
-      <h2 className="text-sm font-bold uppercase tracking-wider text-earth-600 mb-4 flex items-center gap-2">
+      <h2 className="text-sm font-bold uppercase tracking-wider text-earth-600 dark:text-earth-400 mb-4 flex items-center gap-2">
         <List size={16} />
         Sommaire
       </h2>
@@ -32,12 +32,12 @@ export const TableOfContents: React.FC = () => {
                 item.level === 1 ? 'pl-7' : ''
               } ${
                 activeId === item.id
-                  ? 'bg-amazigh-100 text-amazigh-800 font-medium'
-                  : 'text-ink-600 hover:text-amazigh-700 hover:bg-amazigh-50'
+                  ? 'bg-amazigh-100 dark:bg-ink-700 text-amazigh-800 dark:text-ink-200 font-medium'
+                  : 'text-ink-600 dark:text-ink-300 hover:text-amazigh-700 dark:hover:text-amazigh-300 hover:bg-amazigh-50 dark:hover:bg-ink-800'
               }`}
             >
               {activeId === item.id && (
-                <ChevronRight size={12} className="text-amazigh-600 shrink-0" />
+                <ChevronRight size={12} className="text-amazigh-600 dark:text-amazigh-400 shrink-0" />
               )}
               <span className="leading-snug">{item.label}</span>
             </button>
