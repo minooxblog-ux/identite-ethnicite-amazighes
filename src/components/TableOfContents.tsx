@@ -60,7 +60,7 @@ export const TableOfContents: React.FC = () => {
 
       {/* Mobile Sidebar */}
       <div
-        className={`no-print fixed z-40 top-0 right-0 h-full w-80 bg-white/95 backdrop-blur-md shadow-2xl transform transition-transform duration-500 ease-out lg:hidden ${
+        className={`no-print fixed z-40 top-0 right-0 h-full w-80 bg-white/95 shadow-2xl transform transition-transform duration-500 ease-out lg:hidden ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-label="Table des matières"
@@ -71,7 +71,7 @@ export const TableOfContents: React.FC = () => {
       {/* Overlay for mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/30 z-40 lg:hidden backdrop-blur-sm"
+          className="fixed inset-0 bg-black/30 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
