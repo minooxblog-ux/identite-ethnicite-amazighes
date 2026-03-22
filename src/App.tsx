@@ -50,6 +50,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-amazigh-50 dark:bg-ink-950" lang="fr">
+      {/* Hidden content for SEO */}
+      <div style={{ display: 'none' }}>
+        Identité et ethnicité amazighes à l'ère des réseaux numériques — B. Boulouayz
+        Article scientifique sur l'évolution de l'identité amazighe dans le monde numérique, par B. Boulouayz.
+        Explorant les constructions discursives, médiations et perceptions chez les jeunes au Maroc.
+        Amazigh identity, Berber ethnicity, digital networks, cultural transformation.
+      </div>
       {/* Reading Progress */}
       <div className="reading-progress" style={{ width: `${progress}%` }} />
 
