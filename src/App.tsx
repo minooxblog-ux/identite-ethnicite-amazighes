@@ -49,7 +49,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-amazigh-50 dark:bg-ink-950" lang="fr">
+    <div className="min-h-screen bg-amazigh-50 text-ink-900 dark:bg-ink-950 dark:text-ink-100" lang="fr">
       {/* Hidden content for SEO */}
       <div style={{ display: 'none' }}>
         Identité et ethnicité amazighes à l'ère des réseaux numériques — B. Boulouayz
@@ -61,7 +61,7 @@ function App() {
       <div className="reading-progress" style={{ width: `${progress}%` }} />
 
       {/* Hero Header */}
-      <header className="relative overflow-hidden bg-gradient-to-br from-earth-950 via-earth-900 to-amazigh-950 dark:from-ink-950 dark:via-ink-900 dark:to-ink-800 text-white">
+      <header className="relative overflow-hidden bg-gradient-to-br from-earth-950 via-earth-900 to-amazigh-950 dark:from-ink-950 dark:via-ink-900 dark:to-ink-800 text-white dark:text-amber-100">
         {/* Decorative Tifinagh pattern */}
         <div className="absolute inset-0 opacity-[0.04] select-none pointer-events-none" aria-hidden="true">
           <div className="absolute top-10 left-10 text-[12rem] font-bold leading-none">ⵣ</div>
@@ -88,7 +88,7 @@ function App() {
           </div>
 
           <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-            <div className="flex flex-wrap items-center gap-4 mt-8 text-earth-200">
+            <div className="flex flex-wrap items-center gap-4 mt-8 text-earth-200 dark:text-earth-100">
               <div className="flex items-center gap-2">
                 <GraduationCap size={18} className="text-amazigh-400" />
                 <span className="font-semibold text-white">Brahim Boulouayz</span>
@@ -129,14 +129,14 @@ function App() {
             
             {/* Abstract Card */}
             <RevealSection className="mb-10">
-              <div className="bg-white dark:bg-ink-900 rounded-2xl shadow-sm border border-earth-200 dark:border-ink-700 p-6 md:p-8">
+              <div className="bg-white dark:bg-ink-900 rounded-2xl shadow-sm dark:shadow-none border border-earth-200 dark:border-ink-700 p-6 md:p-8">
                 <h2 className="text-lg font-bold text-earth-800 dark:text-ink-200 mb-4 flex items-center gap-2">
                   <span className="w-8 h-8 bg-amazigh-100 rounded-lg flex items-center justify-center">
                     <BookOpen size={16} className="text-amazigh-700" />
                   </span>
                   Résumé
                 </h2>
-                <P currentParagraph={cp} className="text-ink-700 text-base leading-relaxed !mb-0">
+                <P currentParagraph={cp} className="text-ink-700 dark:text-ink-100 text-base leading-relaxed !mb-0">
                   Cet article interroge les dynamiques de construction identitaire amazighe telles qu'elles se déploient dans les espaces numériques au Maroc. En croisant une analyse de contenu des récits identitaires publiés sur des plateformes numériques dédiées et une enquête par questionnaire menée auprès de jeunes dans trois régions marocaines (Souss Massa Drâa, Béni Mellal Khénifra, Tanger Tétouan Al Hoceïma), cette recherche met en évidence les discordances entre les discours officiels, les productions médiatiques militantes et la perception vécue de l'identité chez les jeunes amazighophones. L'article propose un cadre théorique pluridisciplinaire articulant les sciences de l'information et de la communication, la sociologie des identités et les études postcoloniales pour saisir les reconfigurations de l'ethnicité amazighe à l'ère du numérique. Les résultats montrent que les réseaux socionumériques constituent des espaces de reformulation identitaire où coexistent des logiques de patrimonialisation, de politisation et de réinvention culturelle, tout en révélant des tensions significatives entre les catégorisations institutionnelles et les appropriations subjectives de l'amazighité par les jeunes générations.
                 </P>
                 <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-earth-100">

@@ -77,7 +77,7 @@ export const TableOfContents: React.FC = () => {
       )}
 
       {/* Desktop Sidebar */}
-      <aside className="hidden lg:block lg:w-72 xl:w-80 shrink-0">
+      <aside className="hidden lg:block lg:w-72 xl:w-80 shrink-0 bg-white/0 dark:bg-ink-950/0">
         <div className="sticky top-20">
           <nav aria-label="Table des matières">
             <TocContent />
