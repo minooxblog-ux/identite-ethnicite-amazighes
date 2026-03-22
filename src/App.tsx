@@ -106,11 +106,7 @@ function App() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Sidebar - Table of Contents */}
-          <aside className="hidden lg:block lg:w-72 xl:w-80 shrink-0">
-            <div className="sticky top-20">
-              <TableOfContents />
-            </div>
-          </aside>
+          <TableOfContents />
 
           {/* Article Body */}
           <article className="flex-1 max-w-3xl" id="article-content" lang="fr">
@@ -554,8 +550,7 @@ function App() {
         <ArrowUp size={20} />
       </button>
 
-      {/* Mobile TOC */}
-      <TableOfContents />
+
     </div>
   );
 }
