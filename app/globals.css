@@ -1,6 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-amazigh-500: #e59c47;
+  --color-amazigh-600: #d48534; /* matches your rgb(212, 133, 52) */
+  --color-amazigh-700: #b77129;
+  --color-amazigh-800: #9a5e20;
+}
 
 @layer base {
   :root {
