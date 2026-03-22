@@ -1,0 +1,21 @@
+{
+  "name": "Amazigh Identity: Digital Construction of Cultural Heritage",
+  "short_name": "Amazigh Identity",
+  "description": "An academic exploration of how digital technologies are reshaping Amazigh cultural identity and heritage preservation in the modern era.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#d48534",
+  "theme_color": "#d48534",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
