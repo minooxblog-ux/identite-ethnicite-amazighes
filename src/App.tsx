@@ -1,11 +1,12 @@
 import React from 'react';
-import { ArrowUp, BookOpen, GraduationCap, MapPin } from 'lucide-react';
+import { ArrowUp, BookOpen, GraduationCap, MapPin, Sun, Moon } from 'lucide-react';
 import { FootnoteRef } from './components/FootnoteRef';
 import { RevealSection } from './components/RevealSection';
 import { TableOfContents } from './components/TableOfContents';
 import { TTSControls } from './components/TTSControls';
 import { useReadingProgress } from './hooks/useReadingProgress';
 import { useTTS } from './hooks/useTTS';
+import { useTheme } from './contexts/ThemeContext';
 import { footnotes, bibliography, keywords } from './articleData';
 
 /* ── Paragraph wrapper for TTS ── */
@@ -20,7 +21,7 @@ const P: React.FC<{ children: React.ReactNode; className?: string; currentParagr
     <p
       id={id}
       data-tts
-      className={`text-ink-800 leading-[1.9] text-[1.05rem] md:text-[1.1rem] mb-5 text-justify transition-all duration-500 ${
+      className={`text-ink-800 dark:text-ink-200 leading-[1.9] text-[1.05rem] md:text-[1.1rem] mb-5 text-justify transition-all duration-500 ${
         isCurrent ? 'tts-reading' : ''
       } ${className}`}
       lang="fr"
@@ -33,6 +34,7 @@ const P: React.FC<{ children: React.ReactNode; className?: string; currentParagr
 function App() {
   const progress = useReadingProgress();
   const tts = useTTS();
+  const { theme, toggleTheme } = useTheme();
   const cp = tts.currentParagraph;
 
   const scrollToTop = () => {
@@ -47,12 +49,12 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-amazigh-50" lang="fr">
+    <div className="min-h-screen bg-amazigh-50 dark:bg-ink-950" lang="fr">
       {/* Reading Progress */}
       <div className="reading-progress" style={{ width: `${progress}%` }} />
 
       {/* Hero Header */}
-      <header className="relative overflow-hidden bg-gradient-to-br from-earth-950 via-earth-900 to-amazigh-950 text-white">
+      <header className="relative overflow-hidden bg-gradient-to-br from-earth-950 via-earth-900 to-amazigh-950 dark:from-ink-950 dark:via-ink-900 dark:to-ink-800 text-white">
         {/* Decorative Tifinagh pattern */}
         <div className="absolute inset-0 opacity-[0.04] select-none pointer-events-none" aria-hidden="true">
           <div className="absolute top-10 left-10 text-[12rem] font-bold leading-none">ⵣ</div>
@@ -99,8 +101,17 @@ function App() {
         </div>
 
         {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-amazigh-50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-amazigh-50 dark:from-ink-950 to-transparent" />
       </header>
+
+      {/* Theme Toggle Button */}
+      <button
+        onClick={toggleTheme}
+        className="fixed top-4 right-4 z-50 bg-white/10 dark:bg-black/10 backdrop-blur-md text-white p-2 rounded-full hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300"
+        aria-label="Toggle theme"
+      >
+        {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+      </button>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
@@ -113,8 +124,8 @@ function App() {
             
             {/* Abstract Card */}
             <RevealSection className="mb-10">
-              <div className="bg-white rounded-2xl shadow-sm border border-earth-200 p-6 md:p-8">
-                <h2 className="text-lg font-bold text-earth-800 mb-4 flex items-center gap-2">
+              <div className="bg-white dark:bg-ink-900 rounded-2xl shadow-sm border border-earth-200 dark:border-ink-700 p-6 md:p-8">
+                <h2 className="text-lg font-bold text-earth-800 dark:text-ink-200 mb-4 flex items-center gap-2">
                   <span className="w-8 h-8 bg-amazigh-100 rounded-lg flex items-center justify-center">
                     <BookOpen size={16} className="text-amazigh-700" />
                   </span>
