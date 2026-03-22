@@ -36,6 +36,32 @@
   --color-ink-800: #40424a;
   --color-ink-900: #383a40;
   --color-ink-950: #1e1f24;
+
+  --color-amazigh-50-dark: #1e1f24;
+  --color-earth-950-dark: #1e1f24;
+  --color-ink-800-dark: #cdd0d5;
+  --color-ink-900-dark: #383a40;
+  --color-amazigh-700-dark: #494c57;
+  --color-earth-200-dark: #494c57;
+  --color-amazigh-300-dark: #a9aeb7;
+  --color-amazigh-400-dark: #7e8594;
+  --color-amazigh-600-dark: #555967;
+  --color-earth-800-dark: #40424a;
+  --color-amazigh-100-dark: #e5e7eb;
+}
+
+.dark {
+  --color-amazigh-50: var(--color-amazigh-50-dark);
+  --color-earth-950: var(--color-earth-950-dark);
+  --color-ink-800: var(--color-ink-800-dark);
+  --color-ink-900: var(--color-ink-900-dark);
+  --color-amazigh-700: var(--color-amazigh-700-dark);
+  --color-earth-200: var(--color-earth-200-dark);
+  --color-amazigh-300: var(--color-amazigh-300-dark);
+  --color-amazigh-400: var(--color-amazigh-400-dark);
+  --color-amazigh-600: var(--color-amazigh-600-dark);
+  --color-earth-800: var(--color-earth-800-dark);
+  --color-amazigh-100: var(--color-amazigh-100-dark);
 }
 
 @keyframes fadeInUp {
